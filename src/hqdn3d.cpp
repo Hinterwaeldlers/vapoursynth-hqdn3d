@@ -121,7 +121,9 @@ deNoise(
 					, coefsTemporal
 				);
 			}
-			prevPlane[row * frameWidth + col] = (resPix + ROUND_LINE) >> SHIFT_LINE;
+
+			prevPlane[row * frameWidth + col]
+				= ((resPix + ROUND_LINE) >> SHIFT_LINE) & 0xFFFF;
 			tarPlane[row * tarStride + col]
 				= (resPix + ROUND_PIXEL) >> SHIFT_PIXEL;
 		}
