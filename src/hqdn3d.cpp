@@ -34,7 +34,7 @@ typedef struct Hqdn3dData {
 	double chromSpac = -1.0;
 	double lumTmp    = -1.0;
 	double chromTmp  = -1.0;
-	int restartLap   = -1.0;
+	int restartLap   = -1;
 
 	int coefs[4][512*16];
 	int planeCnt     = -1;
