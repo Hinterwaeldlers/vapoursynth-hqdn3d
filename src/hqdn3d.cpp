@@ -207,6 +207,8 @@ static const VSFrameRef *VS_CC hqdn3dGetFrame(
 			, n == 0
 		);
 	}
+
+	vsapi->freeFrame(srcFrame);
 	return newFrame;
 }
 
