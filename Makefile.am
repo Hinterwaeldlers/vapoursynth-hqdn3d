@@ -1,6 +1,6 @@
 warning_flags = -Wall -Wextra -Wshadow -Wpedantic
-common_cflags = -g3 -O0 $(MFLAGS) $(STACKREALIGN) $(warning_flags)
-AM_CXXFLAGS = -g3 -std=c++11 $(common_cflags)
+common_cflags = -O2 $(MFLAGS) $(STACKREALIGN) $(warning_flags)
+AM_CXXFLAGS = -std=c++11 $(common_cflags)
 
 AM_CPPFLAGS = $(VapourSynth_CFLAGS)
 

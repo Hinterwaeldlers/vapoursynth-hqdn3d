@@ -39,20 +39,9 @@ AS_CASE(
 AS_IF(
       [test "x$X86" = "xtrue"],
       [
-       AC_DEFINE([DEGRAINMEDIAN_X86])
-
        AC_SUBST([MFLAGS], ["-mfpmath=sse -msse2"])
       ]
 )
-
-AS_IF(
-      [test "x$ARM" = "xtrue"],
-      [AC_DEFINE([DEGRAINMEDIAN_ARM])]
-)
-
-
-AM_CONDITIONAL([DEGRAINMEDIAN_X86], [test "x$X86" = "xtrue"])
-AM_CONDITIONAL([DEGRAINMEDIAN_ARM], [test "x$ARM" = "xtrue"])
 
 
 PKG_CHECK_MODULES([VapourSynth], [vapoursynth])
