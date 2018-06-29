@@ -182,8 +182,9 @@ static const VSFrameRef *VS_CC hqdn3dGetFrame(
             n - usrData->last_frame <= usrData->restartLap + 1 &&
             usrData->last_frame >= 0) {
 
-            for (int i = usrData->last_frame + 1; i < n; i++)
+            for (int i = usrData->last_frame + 1; i < n; i++) {
                 vsapi->requestFrameFilter(i, usrData->clip, frameCtx);
+            }
         // if processing out of sequence, filter several previous frames to minimize seeking problems
         } else if (n != usrData->last_frame + 1) {
             int sn = std::max(0, n - usrData->restartLap);
